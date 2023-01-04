@@ -1,97 +1,225 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="eng">
 
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Resume</title>
-        <link rel="stylesheet" href="css/index.css" />
-    </head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Joao Morim</title>
+        <meta name="description" content="Portfolio website for Joao Morim">
+        <meta name="keywords" content="Joao Morim, Portfolio, Personal Website, Climate Scientist">
 
-    <meta>
-    </meta>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+
+        <!--linkage to css code-->
+        <link rel="stylesheet" href="css/index.css"/>
+    </head>
 
     <body>
         <header>
-             <div class="content-width">
-                <h2><em>Joao Morim<em></h2>
+             <div class="container">
+
+                <nav class="nav"> <!--represents a section of a page whose purpose is to provide navigation links-->
+                    <ul class="menu" role="list">
+                        <li class="menu__item">
+                            <img class="image" src="./img/Joao-Morim.jpeg" role="presentation">
+                        </li>
+                        <li class="menu__item__large">
+                            <a class="link--no-color-strong" href="/">Joao Morim</a>
+                        </li>
+                    </ul>
+
+                    <ul class="menu--items" role="list">
+                        <li class="menu__item">
+                            <a class="link--no-color" href="#about">About</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="link--no-color" href="#skills">Skills</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="link--no-color" href="#experience">Experience</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="link--no-color" href="#projects">Projects</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="link--no-color" href="#contact">Contact</a>
+                        </li>
+                </nav>
             </div>
         </header>
-        
-    <section>
-        
-        <h2>About</h2>
 
-        I am a Climate Scientist working on offshore and coastals risks from coastal flooding and recession 
-        driven by sea-level rise, storm surges, waves and tides. I am currenty working at University of Central
-        Florida. My current work involves predicting extreme return period values of storm surges for United
-        States using a Bayesian Hierarchial Model (BHM).
+        <main>
 
-    </section>
+        <div class="container">
+          <h1 class="read-only">Personal Portfolio</h1>
 
-    <section id="experience"> 
-    
-        <h2>Experience</h2>
+          <section id="about">
+             <h2>About</h2>
+             <p>
+             Climate Scientist working on offshore and coastals risks from coastal flooding and recession driven by sea-level rise, storm surges, waves and tides. I am currenty working at University of Central Florida. My current research involves predicting extreme return period values of storm surges for United States using a Bayesian Hierarchial Model (BHM).
+             </p>
+             <p>
+             Pronouns:
+             <strong>he/him</strong>
+             </p>
+          </section>
 
-        I have worked at Griffith University, CSIRO (Australia), United States Geological Survey (USGS) and
-        at the Coastal Engineering & Risk Lab of the University of Central Florida. I have worked across
-        different national and international projects within my field of expertise.
+          <section id="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
 
-    </section>
+            </ul>  
+          </section>
 
-    <section id="skills">
+          <section id="Academic Qualifications">
+            <h2>Academic Qualifications</h2>
+            <ul role="list">
+            <li class="card">
+                <span>
+                    <strong>PhD, Climate Change and Coastal Risk</strong>
+                    - Griffith University, Australia   
+                    </span>
+                <span class="emphasis">2020</span>
+            </li>
+            <li class="card">
+                <span>
+                    <strong>MPhil, Coastal and Marine Engineering</strong>
+                    - Griffith University, Australia   
+                    </span>
+                <span class="emphasis">2016</span>
+            </li>
+            <li class="card">
+                <span>
+                    <strong>BEng, Energy and Environmental Engineering</strong>
+                    - University of Lisbon, Portugal    
+                    </span>
+                <span class="emphasis">2012</span>
+            </li>
+          </section>
 
-        <h2>Skills</h2>
+          <section id="experience">
+            <h2>Experience</h2>
+            <ul role="list">
+            <li class="card">
+                <span>
+                    <strong>Coastal Scientist</strong>
+                    - University of Central Florida (UCF)   
+                    </span>
+                <span class="emphasis">Jan 2021 - Present</span>
+            </li>
+            <li class="card">
+                <span>
+                    <strong>Affiliated Coastal Scientist</strong>
+                    - CSIRO    
+                    </span>
+                <span class="emphasis">Fev 2017  - Jan 2021</span>
+            </li>
+            <li class="card">
+                <span>
+                    <strong>Coastal Engineer</strong>
+                    - U.S. Geological Survey (USGS)    
+                    </span>
+                <span class="emphasis">Jun 2019 - Jan 2020</span>
+            </li>
+            <li class="card">
+                <span>
+                    <strong>Asisstant Lecturer</strong>
+                     - Griffith University   
+                    </span>
+                <span class="emphasis">June 2015 - Oct 2018</span>
+            </li>
+            <li class="card">
+                <span>
+                    <strong>Coastal Engineer</strong>
+                    - International Coastal Management (ICM)
+                    </span>
+                <span class="emphasis">Jan 2016 - Jun 2016</span>
+            </li>
+            </ul>  
+          </section>
 
-     <ul>
+          <section id="projects">
+            <h2>Key projects</h2>
+            <ul>
+                <!-- HTML will be inserted here via JS--> 
+                <li>
+                <a class="link--to-projects" href="https://nespclimate.com.au/coastal-hazards/">NESP Project 2.10</a>
+                </li>   
+                <li>
+                <a class="link--to-projects" href="https://nespclimate.com.au/marine-and-coastal-climate-services-project-5-8/">NESP Project 5.8</a>
+                </li>   
+            </ul>
+          </section>
 
-     </ul>
+          <section id="Scientific articles">
+            <h2>Publications</h2>
+            <ul>
+                <!-- HTML will be inserted here via JS--> 
+                <li>
+                <a class="link--to-projects" href="https://github.com/ethomp-dev/intro-to-programming-eclipse">intro-to-programming-eclipse</a>
+                </li>   
+            </ul>
+          </section>
 
-    </section>
+          <section id="contact">
+            <h2>Leave a Message</h2>
+            <form name="leave a message">
+                <div class="field--inline">
+                    <label class="field__label" for="lm_name">Name</label>
+                    <input class="field__input" id="lm_name" type="text" name="name" required>
+                </div>
+                <div class="field--inline">
+                    <label class="field__label" for="lm_email">Email Address</label>
+                    <input class="field__input" id="lm_email" type="email" name="email" required>
+                </div>
+                <div class="field">
+                    <label class="field__label" for="lm_message">Message</label>
+                    <textarea class="field__input" id="lm_message" name="message" required></textarea>
+                </div>
+                <button class="button" type="submit">Submit</button>
+            </form>
+          </section>
 
-    <section id="connect">
-        
-        <p><h2>Connect</h2></p>
-    
-        Email: jmorimnascimento@gmail.com
-        GitHub: jmmorim 
-        Linkdln: https://www.linkedin.com/in/joaommorim/
+          <section id="messages">
+            <h2>Messages</h2>
+            <ul class="message-list" role="list">
+            <!-- HTML will be inserted via JS-->
+            </ul>
+          </section>
 
-    </section>
+        </div>
+        </main>
+
+        <footer>
+        <div class="container">
+            <nav class="nav-bottom">
+
+                <ul class="menu" role="list">
+                    <li class="menu__item">
+                         <a class="link link--no-color" href="https://www.linkedin.com/in/joaommorim/" target="_blank" title="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>   
+                         </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="link link--no-color" href="https://github.com/jmmorim" target="_blank" title="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                   </li>
+                   <li class="menu__item">
+                        <a class="link link--no-color" href="https://twitter.com/" target="_blank" title="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        </a>
+                    </li>
+                </ul>
+                
+            </nav>
+        </div>
+        </footer>
+
+    <script src="js/index.js" defer></script>
 
     </body>
 
-    <section id="leavemessage">
-
-        <h2>Leave a Message</h2>
-
-        <form name="leave_message">
-        
-        <label for="username">Enter your name</label><br>
-        <input type="text" name="name" required><br>
-
-        <label for="useremail">Enter your email</label><br>
-        <input type="email" name="email" required><br>
-
-        <label for="usermessage">Enter your message</label><br>
-        <textarea name="message" cols="30" rows="10" required></textarea><br>
-
-        <button type="submit">Submit</button><br>
-
-        </form>
-
-    </section>
-
-    <section id="messages">
-
-        <h2>Messages</h2>
-
-        <ul></ul>
-
-    </section>
-
-    <footer></footer>
-    <script src="js/index.js" defer></script>
-
-</html>
+    </html>

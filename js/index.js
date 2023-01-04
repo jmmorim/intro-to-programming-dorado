@@ -1,20 +1,25 @@
+//section for footer
+
 let today= new Date();
 
 let thisYear=today.getFullYear();
 
-let footer=document.querySelector('footer');
+let footer=document.querySelector('.nav-bottom');
 
 let copyright=document.createElement('p');
 
-copyright.textContent = `Joao Morim ${thisYear}`;
+copyright.textContent = `@ Joao Morim ${thisYear}`;
 
 footer.appendChild(copyright);
+
+
+//section for listing skills
 
 let skills = ['Python','Matlab','HTML','Javascript','Microsoft Office'];
 
 let SkillsSection=document.querySelector('#skills');
 
-let skillsList=SkillsSection.querySelector('ul'); //not working - not sure why
+let skillsList=SkillsSection.querySelector('.skills-list');
 
 for (i=0; i<skills.length; i++){
 
@@ -26,43 +31,46 @@ for (i=0; i<skills.length; i++){
 
     }
 
-let messageForm = document.querySelector('[name = "leave_message"]');
+
+//section for text boxes
+   
+let messageForm = document.querySelector('[name = "leave a message"]');
 //console.log(messageForm)
+
+document.querySelector('#messages').style.visibility = "hidden";
 
 messageForm.addEventListener('submit',function(event){
 
     event.preventDefault();
 
     let fullname = event.target.name.value;
-    let email = event.target.email.value;
+    let useremail = event.target.email.value;
     let message = event.target.message.value;
 
-    console.log(fullname)
-    console.log(email)
-    console.log(message)
-
     let messageSection = document.querySelector('#messages');
+    let messageList = messageSection.querySelector('.message-list');
 
-    let messageList = messageSection.querySelector('ul');
+    let newMessage=document.createElement('li'); 
+    newMessage.className = "text-message";   
+    newMessage.textContent = `${fullname} wrote: ${message}`;
 
-    //const link = document.createElement('a');
-    //link.setAttribute('href',`mailto:${email}`);
-    //link.textContent = `${fullname} wrote: ${message}`;
-    //console.log(link)
-
-    newMessage=document.createElement('li');
-    newMessage.textContent = `${fullname} wrote: ${message} `;
-    //newMessage.appendChild(link);
+    newMessage.innerHTML = `<a class="emailname" href=mailto: ${useremail}>${fullname}</a> wrote: ${message}`;
 
     let removeButton = document.createElement('button');
     removeButton.textContent = `remove`;
     removeButton.setAttribute('type','button');
+    removeButton.className = "remove-button";
 
     removeButton.addEventListener('click',function(event){
 
-    let entry = button.parentNode();
-    entry.remove();
+    event.preventDefault();
 
+    let entry = newMessage.parentNode; 
+    newMessage.remove();
+
+    if (messageList.getElementsByTagName('li').length == 0) {
+        messageSection.style.visibility = 'hidden';
+    }
     });
 
     newMessage.appendChild(removeButton);
@@ -70,5 +78,10 @@ messageForm.addEventListener('submit',function(event){
 
     messageForm.reset(); //erase written text on boxes
 
+    if (newMessage != null) {
+        messageSection.style.visibility = 'visible';
+    } else {
+        messageSection.style.visibility = 'hidden';
+    };
 
  });
