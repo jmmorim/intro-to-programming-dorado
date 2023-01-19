@@ -85,3 +85,29 @@ messageForm.addEventListener('submit',function(event){
     };
 
  });
+
+ var githubRequest = new XMLHttpRequest();
+ githubRequest.open('GET','https://api.github.com/users/jmmorim/repos');
+ githubRequest.send();
+
+ githubRequest.addEventListener('load',function(event){
+
+    repositories=JSON.parse(this.response);
+    console.log(repositories);
+ 
+ let projectSection=document.querySelector('#projects');
+ projectList=projectSection.querySelector('ul');
+
+ for (i=0; i<repositories.length; i++){
+
+    let project=document.createElement('li');
+
+    project.textContent = repositories[i].name;
+    
+    projectList.appendChild(project);
+
+ };
+
+});
+
+
