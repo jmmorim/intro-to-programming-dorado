@@ -85,3 +85,63 @@ messageForm.addEventListener('submit',function(event){
     };
 
  });
+
+//  let githubRequest = new XMLHttpRequest();
+//  githubRequest.open('GET','https://api.github.com/users/jmmorim/repos');
+//  githubRequest.send();
+//  githubRequest.addEventListener('load',function(event){
+
+//     repositories=JSON.parse(this.response);
+ 
+//  let projectSection=document.querySelector('#projects');
+
+//  projectList=projectSection.querySelector('.github');
+
+//  for (i=0; i<repositories.length; i++){
+
+//     let project=document.createElement('li');
+
+//     let repositaryname = repositories[i].name;
+
+//     project.textContent = `${repositaryname}`; console.log(project.textContent)
+//     project.innerHTML = `<a class="githublink" href="https://www.github.com">${repositaryname}</a>`;
+
+//     projectList.appendChild(project);
+
+//  };
+
+// });
+
+// URL (required), options (optional)
+fetch('https://api.github.com/users/jmmorim/repos')
+
+  .then(function(response) {
+    // Successful response :)
+    return response.json();
+  })
+
+  .then(function(response) {
+     
+    let projectSection=document.querySelector('#projects');
+
+    projectList=projectSection.querySelector('.github');
+
+    for (i=0; i<response.length; i++){
+
+    let project=document.createElement('li');
+
+    let repositaryname = response[i].name;
+
+    project.textContent = `${repositaryname}`; console.log(project.textContent)
+    project.innerHTML = `<a class="githublink" href="https://www.github.com">${repositaryname}</a>`;
+
+    projectList.appendChild(project);
+
+ };
+
+  })
+  .catch(function(err) {
+    // Error :(
+    console.log('there is an error: ', err);
+  });
+

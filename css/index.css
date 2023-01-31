@@ -150,10 +150,11 @@ ul[class='skills-list'] {
     color: #808092;
 }
 
-.link--to-projects {
+.link--to-projects, .githublink {
     color: #0072e0;
     display: inline-block;
     text-decoration: none;
+    font-style: italic;
 }
 
 input, textarea {
