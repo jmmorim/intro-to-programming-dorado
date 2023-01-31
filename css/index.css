@@ -15,17 +15,25 @@ body {
     margin: 0;
 }
 
+.link--color {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+}
+
 .link--no-color {
     color: inherit;
     text-decoration: none;
     display: inline-block;
+    color: #fe7003;
 }
 
 .link--no-color-strong {
     color: inherit;
     text-decoration: none;
     display: inline-block;
-    font-weight: 500;
+    color: #fefeff;
 }
 
 .container {
@@ -49,11 +57,18 @@ body {
 
 .menu--items {
     display: flex;
+    background-color: rgb(78, 74, 74);
+}
+
+.menu--items a:hover {
+    /* background-color: #ddd; */
+    color: #fe7003;
 }
 
 .menu__item {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     margin-right: 1rem;
+    color: #fff;
 }
 
 .menu__item__large {
@@ -61,20 +76,35 @@ body {
     margin-right: 1rem;
 }
 
-img, picture {
+.image-profile, picture {
     width: 70px;
     height: 70px;
     display: block;
     border-radius: 50%;
+    margin: 5px;
 }
 
-.image {
-    display: inline-block;
+.container-image, picture {
+    padding: 9rem 0;
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 90vw;
+    background-image: url("/img/Background.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-
-
-
+.container-image-image {
+    padding: 1rem 0;
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+}
 
 .read-only{
     height: 1px;
@@ -85,9 +115,9 @@ img, picture {
     width: 1px;
 }
 
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
+#about {
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 h1, h2 {
@@ -125,10 +155,16 @@ ul[class='skills-list'] {
     margin: 0;
 }
 
+ul[class='github'] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .skills-list li {
     border-radius: 3px;
-    border: 2px solid #0072e0;
-    color: #0072e0;
+    border: 2px solid #fe7003;
+    color: #fe7003;
     display: inline-block;
     padding: 0.25rem 0.75rem;
     margin-bottom: 0.5rem;
@@ -150,11 +186,43 @@ ul[class='skills-list'] {
     color: #808092;
 }
 
-.link--to-projects, .githublink {
-    color: #0072e0;
+#projects ul li {
+    color: #5e5e66;
     display: inline-block;
     text-decoration: none;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    display: flex;
+    padding: 0.005rem;
+    font-weight: 500;
     font-style: italic;
+} 
+
+.githublink {
+    color: #5e5e66;
+    text-decoration: none;
+}
+
+#Scientific-articles p a {
+    color: #5e5e66;
+    display: inline-block;
+    text-decoration: none;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    display: flex;
+    padding: 0.005rem;
+    font-weight: 500;
+    font-style: italic;
+} 
+
+#Scientific-articles a:hover {
+    color: #fe7003;
+}
+
+hr {
+    opacity: 0.5;
 }
 
 input, textarea {
@@ -188,7 +256,7 @@ input, textarea {
 }
 
 .button {
-    background-color: #0072e0;
+    background-color: #fe7003;
     border-radius: 3px;
     color: #fff;
     min-width: 100px;
@@ -204,9 +272,6 @@ button {
     font-size: 16px;
 }
 
-p {
-    margin: 0;
-}
 
 p {
     display: block;
@@ -228,16 +293,17 @@ footer {
 }
 
 .remove-button {
-    background-color:#dc2626;
+    background-color:#fe7003;
     border-radius: 3px;
     color: #fff;
     min-width: 100px;
     padding: 0.5rem 1rem;
     transition: opacity 0.2s ease-in-out;
+    margin-left: 10px;
 }
 
 .emailname {
-        color: #0072e0;
+        color: #fe7003;
         display: inline-block;
         text-decoration: none;
 }
@@ -247,4 +313,26 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
+    color: #fe7003;
+}
+
+
+/* tablet */
+@media only screen and (min-width: 400px) and (max-width: 600px) { 
+    body {
+	  background-color: rgb(170, 170, 170)
+    }
+    .menu--items {
+        display:none;
+    }
+}
+
+/* mobile */
+@media only screen and (min-width: 200px) and (max-width: 400px) {
+    body {
+	  	  background-color: rgb(170, 170, 170)
+    }
+    .menu--items {
+        display:none;
+    }
 }

@@ -15,7 +15,7 @@ footer.appendChild(copyright);
 
 //section for listing skills
 
-let skills = ['Python','Matlab','HTML','Javascript','Microsoft Office'];
+let skills = ['Climate Data Science','Offshore and Coastal Risk','Climate Change Impacts','Extreme Weather Events'];
 
 let SkillsSection=document.querySelector('#skills');
 
@@ -129,7 +129,7 @@ fetch('https://api.github.com/users/jmmorim/repos')
     for (i=0; i<response.length; i++){
 
     let project=document.createElement('li');
-
+    
     let repositaryname = response[i].name;
 
     project.textContent = `${repositaryname}`; console.log(project.textContent)
